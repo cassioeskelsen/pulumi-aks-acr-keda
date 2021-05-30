@@ -1,8 +1,8 @@
 [![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new)
 
-# Azure Kubernetes Service (AKS) Cluster using the native Azure Provider
+# Azure Kubernetes Service (AKS) Cluster with Azure Container Registry and Keda
 
-This example deploys an AKS cluster, creates an Azure Active AD application, creates a Service Principal, sets credentials to manage access to the cluster create and associate a Azure Registry Container and deploy Keda Chart.
+This example deploys an AKS cluster, creates an Azure Active AD application, creates a Service Principal, sets credentials to manage access to the cluster create, associate a Azure Registry Container and deploy Keda with Helm.
 
 ## Deploying the App
 
@@ -13,6 +13,12 @@ To deploy your infrastructure, follow the below steps.
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
 2. [Install Python 3.6 or higher](https://www.python.org/downloads/)
 3. [Configure Azure Credentials](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
+
+Important: if you have more than one Azure Subscription, make sure that de deploy will be done in the correct one with this command:
+
+   ```bash
+    $ az account set --subscription subscription_id
+   ```
 
 ### Steps
 
